@@ -10,7 +10,16 @@ import "math"
 // CalcSquare(10.0, SidesSquare)
 // CalcSquare(10.0, SidesCircle)
 
-func CalcSquare(sideLen float64, sidesNum int) float64 {
+type myType int
+
+const (
+	SidesCircle myType = 0
+	SidesTriangle myType = 3
+	SidesSquare myType = 4
+)
+
+
+func CalcSquare(sideLen float64, sidesNum myType) float64 {
 	switch sidesNum {
 	case 0:
 		//area of circle
